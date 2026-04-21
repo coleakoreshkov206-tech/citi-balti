@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!-- Страница "Контакты" — содержит форму с 4+ полями ввода -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Контактная информация и форма обратной связи — Бельцы">
+    <meta name="author" content="Запрудский Роман">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/home.png">
+
+    <title>Бельцы — Контакты</title>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <img class="logo" src="../images/home.png" alt="Логотип — иконка дома">
+        <nav>
+            <a href="../index.html">Главная</a>
+            <a href="../pages/despre.html">О городе</a>
+            <a href="../pages/dostoprimechatel.html">Достопримечательности</a>
+            <a href="../pages/index.html">Подробнее</a>
+            <a href="../pages/structura.html">Статистика</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars" aria-label="Открыть меню"></i>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="centered">Контакты</h1>
+
+            <!-- Якорные ссылки -->
+            <nav class="page-anchors" aria-label="Навигация по странице">
+                <a href="#contacts-info">Контактная информация</a>
+                <a href="#feedback-form">Обратная связь</a>
+                <a href="#map-section">Карта</a>
+            </nav>
+
+            <div class="row">
+                <!-- Блок контактных данных -->
+                <div class="col-50" id="contacts-info">
+                    <article class="contacte">
+                        <h2 class="centered">Контактная информация</h2>
+
+                        <p><strong>Примария:</strong><br>
+                        <a href="mailto:drp@balti.md">drp@balti.md</a></p>
+
+                        <p><strong>Отдел туризма:</strong><br>
+                        <a href="mailto:turism.dget@balti.md">turism.dget@balti.md</a></p>
+
+                        <p><strong>Ассоциация гидов:</strong><br>
+                        <a href="mailto:info@guides.md">info@guides.md</a></p>
+
+                        <p><strong>Помощь для беженцев:</strong><br>
+                        <!-- Внешняя ссылка -->
+                        <a href="https://dopomogabalti.org/home_ru" target="_blank" rel="noopener">dopomogabalti.org</a></p>
+
+                        <p><strong>Скорая помощь:</strong><br>
+                        <a href="tel:112">112</a></p>
+                    </article>
+                </div>
+
+                <!-- Форма обратной связи с 4 разными типами полей ввода -->
+                <div class="col-50" id="feedback-form">
+                    <div class="cform">
+                        <h2 class="centered">Обратная связь</h2>
+
+                        <!-- Форма содержит минимум 4 различных поля ввода -->
+                        <div class="form-group">
+                            <label for="fname">Ваше имя *</label>
+                            <!-- Поле 1: текст -->
+                            <input type="text" id="fname" name="name" placeholder="Иван Иванов" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="femail">Email *</label>
+                            <!-- Поле 2: email -->
+                            <input type="email" id="femail" name="email" placeholder="ivan@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fphone">Телефон</label>
+                            <!-- Поле 3: телефон -->
+                            <input type="tel" id="fphone" name="phone" placeholder="+373 XX XXX XXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fsubject">Тема обращения</label>
+                            <!-- Поле 4: select (выпадающий список) -->
+                            <select id="fsubject" name="subject">
+                                <option value="">— Выберите тему —</option>
+                                <option value="tourism">Туризм</option>
+                                <option value="city">Вопрос о городе</option>
+                                <option value="event">Мероприятия</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="frating">Оцените наш сайт</label>
+                            <!-- Поле 5: range -->
+                            <input type="range" id="frating" name="rating" min="1" max="5" value="3"
+                                   oninput="document.getElementById('rating-val').textContent = this.value">
+                            <span>Оценка: <strong id="rating-val">3</strong> / 5</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="fmessage">Ваше сообщение *</label>
+                            <!-- Поле 6: textarea -->
+                            <textarea id="fmessage" name="message" rows="5" placeholder="Напишите ваше сообщение..." required></textarea>
+                        </div>
+
+                        <!-- Кнопка отправки с обработкой на стороне клиента -->
+                        <button type="button" class="btn-submit" onclick="submitForm()">Отправить</button>
+                        <div id="form-message" class="form-feedback" aria-live="polite"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карта города -->
+            <div id="map-section" style="margin-top: 30px;">
+                <h2 class="centered">Расположение города</h2>
+                <iframe class="harta"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42907.97107232485!2d27.860093747606285!3d47.76693839751698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cb673a731f2613%3A0x75ffb7a54ede02d9!2z0JHQtdC70YzRhtGLLCDQnNC-0LvQtNC-0LLQsA!5e0!3m2!1sru!2s!4v1774688675212!5m2!1sru!2s"
+                    title="Карта города Бельцы"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <span>© Бельцы — мой город, 2026</span>
+            <a href="https://balti.md" target="_blank" rel="noopener">Официальный сайт города</a>
+            <span>Запрудский Роман, группа 22</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

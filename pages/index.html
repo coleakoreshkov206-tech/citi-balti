@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!-- Страница "Подробнее" — дополнительная информация о городе -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подробная информация о городе Бельцы — география, экономика, культура">
+    <meta name="author" content="Запрудский Роман">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/home.png">
+
+    <title>Бельцы — Подробнее</title>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <img class="logo" src="../images/home.png" alt="Логотип — иконка дома">
+        <nav>
+            <a href="../index.html">Главная</a>
+            <a href="../pages/despre.html">О городе</a>
+            <a href="../pages/dostoprimechatel.html">Достопримечательности</a>
+            <a href="../pages/index.html">Подробнее</a>
+            <a href="../pages/structura.html">Статистика</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars" aria-label="Открыть меню"></i>
+    </header>
+
+    <main>
+        <section class="more-info">
+            <!-- Главный блок -->
+            <div class="more-info-hero">
+                <h1>Подробнее о Бельцах</h1>
+                <p>
+                    Бельцы часто называют северной столицей Молдовы. Город сочетает в себе
+                    живую городскую среду, историю и удобное расположение для путешествий по северу страны.
+                </p>
+            </div>
+
+            <!-- Якорная навигация -->
+            <nav class="page-anchors" aria-label="Навигация по разделам">
+                <a href="#geo">География</a>
+                <a href="#economy">Экономика</a>
+                <a href="#culture">Культура</a>
+                <a href="#route">Маршрут</a>
+            </nav>
+
+            <h2>Кратко о Бельцах</h2>
+            <div class="info-grid">
+                <article class="info-card" id="geo">
+                    <h3>🌍 География</h3>
+                    <p>
+                        Бельцы расположены на севере Молдовы, в районе реки Реут.
+                        Город является важным транспортным узлом для всего региона.
+                    </p>
+                </article>
+
+                <article class="info-card" id="economy">
+                    <h3>💼 Экономика</h3>
+                    <p>
+                        В Бельцах развиты торговля, логистика, производство и сфера услуг.
+                        Это один из ключевых экономических центров страны.
+                    </p>
+                </article>
+
+                <article class="info-card" id="culture">
+                    <h3>🎭 Образование и культура</h3>
+                    <p>
+                        В городе работают учебные заведения, культурные площадки, музеи
+                        и проводятся городские праздники, которые объединяют жителей.
+                    </p>
+                </article>
+            </div>
+
+            <div class="info-block">
+                <h2>Почему туристам интересны Бельцы</h2>
+                <ul class="info-list">
+                    <li>Уютный центр города с площадями, парками и кафе.</li>
+                    <li>Исторические места и памятники, связанные с развитием региона.</li>
+                    <li>Удобная база для поездок по северу Молдовы и соседним районам.</li>
+                    <li>Гостеприимная атмосфера и разнообразная местная кухня.</li>
+                    <li>Статус «Молодёжная столица Молдовы 2026» — множество молодёжных мероприятий.</li>
+                </ul>
+            </div>
+
+            <div class="info-block" id="route">
+                <h2>Маршрут на один день</h2>
+                <p>
+                    Начните прогулку с центральной части города, затем посетите городской парк и
+                    несколько архитектурных точек в старых кварталах. Днём можно заглянуть в местные кафе,
+                    а вечером выбрать набережную или тихие улицы для спокойной прогулки.
+                </p>
+                <p>
+                    Такой ритм позволяет увидеть Бельцы как современный и живой город, где
+                    история и повседневная жизнь идут рядом.
+                </p>
+            </div>
+
+            <!-- Климатический виджет — динамически генерируемый контент -->
+            <div class="info-block" id="weather-widget">
+                <h2>Климат Бельц</h2>
+                <div id="weather-display">
+                    <p>Загружаем информацию о климате...</p>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <span>© Бельцы — мой город, 2026</span>
+            <a href="https://balti.md" target="_blank" rel="noopener">Официальный сайт города</a>
+            <span>Запрудский Роман, группа 22</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

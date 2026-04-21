@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- Главная страница сайта "Бельцы - мой город" -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <!-- Метатег viewport для адаптивности на всех устройствах -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Бельцы — северная столица Молдовы. Узнайте историю, достопримечательности и жизнь города.">
+    <meta name="author" content="Запрудский Роман">
+    <meta name="keywords" content="Бельцы, Молдова, город, туризм, история">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="images/home.png">
+
+    <title>Бельцы — мой город</title>
+</head>
+<body>
+
+    <!-- Шапка сайта с навигацией -->
+    <header>
+        <img class="logo" src="images/home.png" alt="Логотип — иконка дома">
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="pages/despre.html">О городе</a>
+            <a href="pages/dostoprimechatel.html">Достопримечательности</a>
+            <a href="pages/index.html">Подробнее</a>
+            <a href="pages/structura.html">Статистика</a>
+            <a href="pages/contacte.html">Контакты</a>
+        </nav>
+        <!-- Кнопка мобильного меню -->
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars" aria-label="Открыть меню"></i>
+    </header>
+
+    <main>
+        <!-- Главный баннер (hero section) -->
+        <section id="index" aria-label="Главный экран">
+            <div class="index-info" id="hero-content">
+                <h1 id="hero-title">Бельцы — мой город</h1>
+                <p class="hero-subtitle" id="hero-subtitle">Северная столица Молдовы</p>
+                <a href="pages/despre.html" class="link-index">Узнать больше</a>
+                <!-- Внутренняя якорная ссылка на секцию с фактами -->
+                <a href="#facts" class="link-index link-secondary">Интересные факты ↓</a>
+            </div>
+        </section>
+
+        <!-- Секция с интерактивным счётчиком и фактами -->
+        <section id="facts" class="facts-section" aria-label="Факты о городе">
+            <h2 class="centered">Бельцы в цифрах</h2>
+            <div class="counters-row">
+                <div class="counter-card">
+                    <span class="counter-num" data-target="1421">0</span>
+                    <span class="counter-label">Год первого упоминания</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-num" data-target="100000">0</span>
+                    <span class="counter-label">Жителей</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-num" data-target="138">0</span>
+                    <span class="counter-label">км от Кишинёва</span>
+                </div>
+                <div class="counter-card">
+                    <span class="counter-num" data-target="72">0</span>
+                    <span class="counter-label">Синагоги (1887 год)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция с аудио -->
+        <section class="audio-section" aria-label="Гимн города">
+            <h2 class="centered">Гимн города Бельцы</h2>
+            <p class="centered">Послушайте музыку, посвящённую северной столице Молдовы.</p>
+            <!-- Элемент audio согласно требованиям -->
+            <div class="audio-wrapper">
+                <audio controls id="city-audio">
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Ваш браузер не поддерживает элемент audio.
+                    <a href="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">Скачать аудио</a>
+                </audio>
+                <p class="audio-note"><em>* Демонстрационный трек. Авторские права на музыку принадлежат правообладателям.</em></p>
+            </div>
+        </section>
+
+        <!-- Секция с викториной — динамически генерируемый контент -->
+        <section class="quiz-section" aria-label="Викторина о городе">
+            <h2 class="centered">Проверь себя: Викторина о Бельцах</h2>
+            <div id="quiz-container">
+                <div id="quiz-question"></div>
+                <div id="quiz-options"></div>
+                <div id="quiz-feedback"></div>
+                <button id="quiz-next" class="btn-main" style="display:none" onclick="nextQuestion()">Следующий вопрос</button>
+            </div>
+            <div id="quiz-result" style="display:none">
+                <h3 id="result-text"></h3>
+                <button class="btn-main" onclick="restartQuiz()">Пройти снова</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Подвал сайта -->
+    <footer>
+        <div class="footer-content">
+            <span>© Бельцы — мой город, 2026</span>
+            <!-- Внешняя ссылка на официальный сайт города -->
+            <a href="https://balti.md" target="_blank" rel="noopener">Официальный сайт города</a>
+            <span>Запрудский Роман, группа 22</span>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

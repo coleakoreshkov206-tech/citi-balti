@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!-- Страница достопримечательностей — содержит видео-элемент -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Достопримечательности города Бельцы — памятники, площади, соборы">
+    <meta name="author" content="Запрудский Роман">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="icon" href="../images/home.png">
+
+    <title>Бельцы — Достопримечательности</title>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <img class="logo" src="../images/home.png" alt="Логотип — иконка дома">
+        <nav>
+            <a href="../index.html">Главная</a>
+            <a href="../pages/despre.html">О городе</a>
+            <a href="../pages/dostoprimechatel.html">Достопримечательности</a>
+            <a href="../pages/index.html">Подробнее</a>
+            <a href="../pages/structura.html">Статистика</a>
+            <a href="../pages/contacte.html">Контакты</a>
+        </nav>
+        <i id="hamburger" onclick="mobileMenu()" class="fa-solid fa-bars" aria-label="Открыть меню"></i>
+    </header>
+
+    <main>
+        <section>
+            <h1 class="centered">Достопримечательности Бельц</h1>
+
+            <!-- Якорная навигация по странице -->
+            <nav class="page-anchors" aria-label="Навигация по разделам">
+                <a href="#monument">Памятник Штефану</a>
+                <a href="#square">Площадь Александри</a>
+                <a href="#cathedral">Собор</a>
+                <a href="#video-section">Видео о городе</a>
+            </nav>
+
+            <!-- Достопримечательность 1 -->
+            <article class="loc" id="monument">
+                <h2>Памятник Штефану Великому</h2>
+                <!-- Изображение с атрибутом alt -->
+                <img src="../images/pameatnik.png" alt="Памятник Штефану Великому на Площади Независимости в Бельцах">
+                <p>
+                    В самом сердце северной столицы возвышается величественный монумент, посвящённый самому почитаемому правителю в истории — Штефану чел Маре. Этот бронзовый гигант является не просто украшением города, а важным символом национальной гордости.
+                    Расположенный на Площади Независимости, прямо напротив здания мэрии, этот объект относится к важнейшим историческим памятникам республики. Шестиметровая фигура господаря установлена на пятиметровом постаменте из натурального гранита — это самый высокий памятник Штефану чел Маре в стране.
+                </p>
+            </article>
+
+            <!-- Достопримечательность 2 -->
+            <article class="loc" id="square">
+                <h2>Площадь Василе Александри</h2>
+                <!-- Изображение с атрибутом alt -->
+                <img src="../images/97_big.jpg" alt="Центральная площадь Василе Александри в Бельцах">
+                <p>
+                    Площадь Василе Александри — центральная площадь города Бельцы. Она является главным общественным пространством, где проходят важные культурные, политические и праздничные мероприятия, и служит символическим сердцем муниципия. Считается одной из крупнейших пешеходных зон в Восточной Европе.
+                </p>
+            </article>
+
+            <!-- Достопримечательность 3 -->
+            <article class="loc" id="cathedral">
+                <h2>Собор Святых Константина и Елены</h2>
+                <!-- Изображение с атрибутом alt -->
+                <img src="../images/cdi.jpg" alt="Собор Святых Константина и Елены в Бельцах">
+                <p>
+                    Собор Святых Константина и Елены — один из самых красивых и значимых храмов города Бельцы. Он является важным религиозным и культурным центром для верующих. Построен в конце XX века, собор сочетает традиционную молдавскую архитектуру с современными строительными технологиями.
+                </p>
+            </article>
+
+            <!-- Достопримечательность 4 -->
+            <article class="loc" id="tank">
+                <h2>Мемориал воинской славы</h2>
+                <!-- Изображение с атрибутом alt -->
+                <img src="../images/tank.png" alt="Танк-памятник — мемориал воинской славы в Бельцах">
+                <p>
+                    Мемориал воинской славы с танком — дань уважения участникам Второй мировой войны. Этот памятник напоминает о подвиге солдат и является местом проведения памятных мероприятий. Расположен в центральной части города и посещается туристами круглый год.
+                </p>
+            </article>
+
+            <!-- Секция с видео (элемент video согласно требованиям) -->
+            <article id="video-section" class="video-section">
+                <h2 class="centered">Видео о городе Бельцы</h2>
+                <p class="centered">Познакомьтесь с городом через кинематографическую прогулку по его улицам и достопримечательностям.</p>
+
+                <!-- Нативный элемент video согласно требованиям -->
+                <div class="video-wrapper">
+                    <video controls poster="../images/index.png" class="city-video" id="city-video">
+                        <!-- Fallback: если нет mp4-файла, используем источник из интернета -->
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        Ваш браузер не поддерживает элемент video.
+                        Посмотрите видео на <a href="https://www.youtube.com/watch?v=JYJQPVX7NnI">YouTube</a>.
+                    </video>
+                    <p class="audio-note"><em>* Демонстрационное видео. Авторские права принадлежат правообладателям.</em></p>
+                </div>
+
+                <!-- Дополнительно: YouTube iframe для реального контента о городе -->
+                <h3 class="centered" style="margin-top: 30px;">Документальный фильм о Бельцах</h3>
+                <iframe class="vframe"
+                    src="https://www.youtube.com/embed/JYJQPVX7NnI?si=W3P_TrQyk-pBWSZm"
+                    title="Документальный фильм о городе Бельцы"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="footer-content">
+            <span>© Бельцы — мой город, 2026</span>
+            <a href="https://balti.md" target="_blank" rel="noopener">Официальный сайт города</a>
+            <span>Запрудский Роман, группа 22</span>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
